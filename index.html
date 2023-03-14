@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Courier New", "Courier New", monospace;
+  font-family: "Garamond", "Garamond", serif;
   margin: 0;
 }
 
@@ -31,33 +31,38 @@ body {
   font-weight: bold;
 }
 
+.emphasized { 
+  font-style: italic; 
+}
+
 /* Style the top navigation bar, original color = #333*/
 .navbar {
   padding: 5px;
   overflow: hidden;
-  background-color: #808080;
+  background-color: #636363;
 }
 
 /* style my name on the navigation bar links*/
 .navbar name {
-  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 26px;
   float: left;
   display: block;
   color: white;
-  text-align: center;
-  padding: 14px 20px;
+  text-align: start;
+  padding: 16px 20px;
   text-decoration: none;
-  text-shadow: 1px 2px 2px #333;
+  text-shadow: 8px 6px 6px #333;
 }
 
 /* Style the right navigation bar links */
 .navbar a {
-  font-size: 20px;
+  font-size: 18px;
   float: right;
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 20px;
+  padding: 26px 20px;
   text-decoration: none;
 }
 
@@ -67,18 +72,57 @@ body {
   color: black;
 }
 
+.navbar icon {
+  float: right;
+  height: 30px;
+  width: 30px;
+}
+
 /* Column container */
 .row {  
   display: flex;
   flex-wrap: wrap;
 }
 
+
 /* Create two unequal columns that sits next to each other */
 /* Sidebar/left column */
 .side {
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #B8B8B9;
   padding: 20px;
+  text-align: start;
+}
+
+.side name {
+  font-size: 24px;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px 20px;
+  text-decoration: none;
+}
+
+.side a{
+  font-size: 18px;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 26px 20px;
+  text-decoration: none;
+}
+
+/* image try */
+img {
+  height: 300px;
+  width: 200px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 /* Main column */
@@ -89,16 +133,13 @@ body {
 }
 
 /* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
 
-/* image try */
-img {
-  height: 300px;
-  width: 200px;
+
+
+
+/* try resize the font p */
+p {
+  font-size: 13px;
 }
   
 /* Footer */
@@ -127,30 +168,23 @@ img {
 <body>
 
 
-<div class="navbar">
-  <name href="index.html"><span class="boldness">Chunyun (Corrine) Xue</span> </name>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-</div>
-
 <div class="row">
   <div class="side">
-    <h2>Who am I?</h2>
-    <h5>Photo of me:</h5>
-    <img src="ProfilePhoto.jpg">
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+    <img src="ProfilePhoto.jpg", class = "center">
+    <name href="index.html"><span class="boldness">CHUNYUN (Corrine) XUE</span> </name>
+    <a href = "#"><span class = "boldness">My Profile</span></a>
+    <a href = "#">Research Foci</a>
+    <a href = "#">Publications</a>
+    <a href = "#">Collaborations</a>
+    <a href = "#">Organisation</a>
   </div>
   <div class="main">
     <h2>TITLE HEADING</h2>
     <h5>Title description, Dec 7, 2017</h5>
     <div class="fakeimg" style="height:200px;">Image</div>
     <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <h3>I am currently in search for a PhD position globally. Recently, I have obtained my first MSc degree (with distinction) in <span class = "boldness">Behavioural and Data Science</span> at the University of Warwick at the year of 2022.
+      Before then in 2021, I was awarded a undergraduate degree in <span class = "boldness">Psychology</span> with Upper-Second Class honors at the University of Bristol. </h3>
     <br>
     <h2>TITLE HEADING</h2>
     <h5>Title description, Sep 2, 2017</h5>
