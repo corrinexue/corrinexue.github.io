@@ -10,7 +10,7 @@
 }
 
 body {
-  font-family: "Rockwell", "Rockwell", serif;
+  font-family: "Garamond", serif;
   margin: 0;
 }
 
@@ -35,17 +35,20 @@ body {
   font-style: italic; 
 }
 
+.name {
+  font-family: 'Book Antiqua';
+}
+
 /* Style the top navigation bar, original color = #333*, not for the index page */
 .navbar {
   padding: 5px;
   overflow: hidden;
-  background-color: #636363;
+  background-color: #18181f;
 }
 
 /* Style the right navigation bar links */
 .navbar a {
   font-size: 18px;
-  float: right;
   display: block;
   color: white;
   text-align: center;
@@ -55,7 +58,7 @@ body {
 
 /* Change color on hover */
 .navbar a:hover {
-  background-color: #ddd;
+  background-color: #e6e6e6;
   color: black;
 }
 
@@ -79,6 +82,7 @@ body {
   background-color: #18181f;
   padding: 20px;
   text-align: start;
+  border-top: 35px solid #e6e6e6;
 }
 
 .side name {
@@ -102,6 +106,8 @@ body {
 /* image try */
 img {
   border-radius: 50%;
+  padding: 18px;
+  width: 80px;
 }
 
 .center {
@@ -116,6 +122,7 @@ img {
   flex: 70%;
   background-color: #e6e6e6;
   padding: 20px;
+  border: 17px solid #e6e6e6;
 }
 
 /* try resize the font p */
@@ -126,18 +133,102 @@ p {
 p.small {
   line-height: 0.3;
 }
+
+/*add collapsible*/
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+  
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 2px solid rgb(209, 201, 201);
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+  
+}
+
+.accordion label {
+  color: #18181f;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e6e6e6;
+  
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label {
+  background-color: #18181f;
+  color: #e6e6e6;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: rgb(209, 201, 201);
+  border: 3px solid rgb(209, 201, 201);
+}
+
+.accordion .handle label:before {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: auto;
+  color: #18181f;
+  content: "\2B9E";
+  width: 9px;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "\2B9F";
+  color: white;
+}
+
   
 /* Footer */
 .footer {
   padding: 20px;
   text-align: center;
-  background: #e6e6e6;
-}
+  background-image: url('nus-logo-silver-b-horizontal.png'), linear-gradient(to right, rgba(24,24,31,1), rgba(75,75,97,1), rgba(209,201,201,1), rgba(230,230,230,1));
+  background-repeat: no-repeat;
+  background-position: 9.5% 50%;
+  background-size: contain;  
+} 
 
+/*background-image: linear-gradient(to right, rgba(24,24,31,1) 1%, rgba(75,75,97,1), 25%, rgba(209,201,201,1) 30%, rgba(230,230,230,1) 70%), background-color: rgb(56,56,73);
+*/
 .footer a {
   font-size: 15px;
   line-height: 0.3;
 }
+
+
+
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
   .row {   
@@ -152,43 +243,75 @@ p.small {
     width:100%;
   }
 }
+
+
 </style>
 </head>
 <body>
 
 
+
 <div class="row">
   <div class="side">
+
     <img src="ProfilePhoto.jpg", class = "center", alt = "Avatar">
-    <name href="index.html"><span class="boldness">CHUNYUN (Corrine) XUE</span> </name>
-    <a href = "index.html"><span class = "boldness">My Profile</span></a>
-    <a href = "ResearchFoci.html">Research Foci</a>
-    <a href = "#">Publications</a>
-    <a href = "#">Collaborations</a>
-    <a href = "#">Organisation</a>
+    <name href="index.html"><span class="name"> XUE, CHUNYUN <span class="emphasized"> Corrine </span> </span> </name>
+
+    <div class = "navbar">
+      <a href = "index.html"><span class = "boldness">My profile</span></a>
+      <a href = "ResearchFoci.html">Interested topics</a>
+      <a href = "publication.html">Research output</a>
+      <a href=#>Working with me</a>
+
+    </div>
+    
   </div>
+
   <div class="main">
-    <h2>ABOUT ME</h2>
-    <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>I am currently in search for a PhD position globally. Recently, I have obtained my first MSc degree (with distinction) in <span class = "boldness">Behavioural and Data Science</span> at the University of Warwick at the year of 2022.
-      Before then in 2021, I was awarded a undergraduate degree in <span class = "boldness">Psychology</span> with Upper-Second Class honors at the University of Bristol. </p>
-    <br>
-    <h2>TITLE HEADING</h2>
-    <h5>Title description, Sep 2, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+
+    <section class="accordion">
+      <input type="checkbox" name="collapse" id="handle1" checked="checked">
+      <h2 class="handle">
+        <label for="handle1"> <span class="boldness"> ABOUT ME </span></label>
+      </h2>
+
+      <div class="content">
+        <p><strong>Overall Impression:</strong> A pale, bitter, highly attenuated and well carbonated Trappist ale, showing a fruity-spicy Trappist yeast character, a spicy-floral hop profile, and a soft, supportive grainy-sweet malt palate.</p>
+        <p><strong>History:</strong> While Trappist breweries have a tradition of brewing a lower-strength beer as a monk’s daily ration, the bitter, pale beer this style describes is a relatively modern invention reflecting current tastes. Westvleteren first brewed theirs in 1999, but replaced older lower-gravity products.</p>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <input type="checkbox" name="collapse2" id="handle2">
+      <h2 class="handle">
+        <label for="handle2">26B. Belgian Dubbel</label>
+      </h2>
+      <div class="content">
+        <p><strong>Overall Impression:</strong> A deep reddish-copper, moderately strong, malty, complex Trappist ale with rich malty flavors, dark or dried fruit esters, and light alcohol blended together in a malty presentation that still finishes fairly dry.</p>
+        <p><strong>History:</strong> Originated at monasteries in the Middle Ages, and was revived in the mid-1800s after the Napoleonic era.</p>
+      </div>
+    </section>
+
+    <section class="accordion">
+      <input type="checkbox" name="collapse2" id="handle3">
+      <h2 class="handle">
+        <label for="handle3">26C. Belgian Tripel</label>
+      </h2>
+      <div class="content">
+        <p><strong>Overall Impression:</strong> A pale, somewhat spicy, dry, strong Trappist ale with a pleasant rounded malt flavor and firm bitterness. Quite aromatic, with spicy, fruity, and light alcohol notes combining with the supportive clean malt character to produce a surprisingly drinkable beverage considering the high alcohol level.</p>
+        <p><strong>History:</strong> Originally popularized by the Trappist monastery at Westmalle.</p>
+      </div>
+    </section>
   </div>
 </div>
 
 <div class="footer">
-  <h5>If you are interested in working with me, please contact: </h5>
-  <p class="small"> personal e-mail: <a href="cxue.corrine@outlook.com">cxue.corrine@outlook.com </a> </p>
-  <p class="small">work email:</p>
-  <p class="small">mobile: </p>
+
+  <p style="font-size: 80%; line-height: 8px;"> <span class="boldness"> Contact details: </span> </p>
+  <p style="font-size: 80%; line-height: 7px;"> <span>&#9993;</span>  <span class = 'emphasized'> personal </span>: <a style="font-size: 100%; line-height: 5px;" href="cxue.corrine@outlook.com">cxue.corrine@outlook.com</a> </p>
+  <p style="font-size: 80%; line-height: 7px;"><span>&#9993;</span> <span class = 'emphasized'> work </span>: <a style="font-size: 100%; line-height: 5px;" href="#">TBC</a></p>
+  
 </div>
 
-</body>>
+</body>
 </html>
