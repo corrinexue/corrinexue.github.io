@@ -10,8 +10,9 @@
 }
 
 body {
-  font-family: "Malgun Gothic";
-  margin: 10px 200px 0 200px;
+  font-family: "Courier new";
+  margin: 30px 150px 0 150px;
+  background-color: rgb(33, 56, 78); /* color of the grand bg */
 }
 
 /* Style the header */
@@ -32,23 +33,23 @@ body {
 }
 
 .name {
-  font-family: 'Book Antiqua';
-  font-size: 22px;
-  text-shadow: #383939;
+  font-family: 'Gill Sans';
+  font-size: 20px;
+  text-shadow: #011b1b;
 }
 
 /* Style the top navigation bar, original color = #333*, not for the index page */
 .navbar {
   padding: 5px;
   overflow: hidden;
-  background-color: #aabcd5; /*navigation bar background*/
+  background-color: rgb(33, 56, 78); /*navigation bar background*/
 }
 
 /* Style the right navigation bar links */
 .navbar a {
-  font-size: 16px;
+  font-size: 14px;
   display: block;
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 26px 20px;
   text-decoration: none;
@@ -57,7 +58,7 @@ body {
 /* Change color on hover */
 .navbar a:hover {
   background-color: #e6e6e6;
-  color: black;
+  color: rgb(22, 22, 22);
 }
 
 .navbar icon {
@@ -77,26 +78,26 @@ body {
 /* Sidebar/left column */
 .side {
   flex: 30%;
-  background-color: #aabcd5; /* name and photo background*/
-  padding: 20px;
+  background-color: rgb(255, 255, 255); /* name and photo background*/
+  padding: 15px;
   text-align: start;
-  border-top: 35px solid white;
-  border-bottom: 15px solid white;
+  border-top: 17.5px solid rgb(33, 56, 78); /* these two are the border color settings of the left row*/
+  border-bottom: 15px solid rgb(33, 56, 78);
 }
 
 .side name {
-  font-size: 24px;
+  font-size: 20px;
   display: block;
-  color: white; /* name text color*/
+  color: rgb(70, 83, 96); /* name text color*/
   text-align: center;
   padding: 16px 20px;
   font-weight: bold;
 }
 
 .side a{
-  font-size: 19px;
+  font-size: 16px;
   display: block;
-  color: white; /* navigation bar text color*/
+  color: rgb(255, 255, 255); /* navigation bar text color*/
   text-align: center;
   padding: 26px 20px;
   text-decoration: none;
@@ -106,22 +107,22 @@ body {
 img {
   border-radius: 50%;
   padding: 10px;
-  width: 350px;
+  width: 500px;
 }
 
 .center {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 75%;
 }
 
 /* Main column */
 .main {   
   flex: 70%;
-  background-color: white;
-  padding: 20px;
-  border: 17px solid white;
+  background-color: rgb(33, 56, 78);
+  padding: 17.5px;
+  /*border: 17px solid rgb(48, 75, 100); /* border color of the right text boxes */
 }
 
 /* try resize the font p */
@@ -150,8 +151,10 @@ p.small {
 .accordion > input[type="checkbox"]:checked ~ .content {
   height: auto;
   overflow: visible;
-  font-family: 'Rockwell';
+  font-family: 'Gill Sans';
   margin: 10px;
+
+  background-color: rgb(255, 255, 255); /*bg color of the literal textboxes*/
 }
 
 .accordion label {
@@ -175,22 +178,21 @@ p.small {
 }
 
 .accordion label {
-  color: #18181f;
+  color: rgb(255, 255, 255);
   cursor: pointer;
   font-weight: normal;
   padding: 15px;
-  background: #e6e6e6;
+  background: rgb(33, 56, 78);
   
 }
 
 .accordion > input[type="checkbox"]:checked ~ .handle label {
-  background-color: #aabcd5;
+  background-color: rgb(33, 56, 78);
   color: white;
 }
 
 .accordion label:hover,
 .accordion label:focus {
-  background: rgb(209, 201, 201);
   border: 3px solid rgb(209, 201, 201);
 }
 
@@ -200,13 +202,13 @@ p.small {
   font-size: .58em;
   line-height: 1.556em;
   vertical-align: auto;
-  color: #18181f;
-  content: "\2B9E";
+  color: rgb(255, 255, 255);
+  content: "\273F";
   width: 9px;
 }
 
 .accordion > input[type="checkbox"]:checked ~ .handle label:before {
-  content: "\2B9F";
+  content: "\2764";
   color: white;
 }
 
@@ -215,7 +217,7 @@ p.small {
 .footer {
   padding: 20px;
   text-align: center;
-  background-image: url('nus-logo-silver-b-horizontal.png'), linear-gradient(130deg, #aabcd5, rgba(209,201,201,1), white);
+  background-image: url('nus-logo-silver-b-horizontal.png'), linear-gradient(130deg, rgb(25, 51, 73), rgba(209,201,201,1), rgb(29, 50, 68));
   background-repeat: no-repeat;
   background-position: 9.5% 50%;
   background-size: contain;  
@@ -255,7 +257,7 @@ p.small {
 <div class="row">
   <div class="side">
 
-    <img src="ProfilePhoto.jpg", class = "center", alt = "Avatar">
+    <img src="ProfilePhoto.jpeg", class = "center", alt = "Avatar">
     <name href="index.html"><span class="name"> XUE, CHUNYUN <span class="emphasized"> Corrine </span> </span> </name>
 
     <div class = "navbar">
@@ -308,7 +310,7 @@ p.small {
 
   <p style="font-size: 80%; line-height: 8px;"> <span class="boldness"> Contact details: </span> </p>
   <p style="font-size: 80%; line-height: 7px;"> <span>&#9993;</span>  <span class = 'emphasized'> personal </span>: <a style="font-size: 100%; line-height: 5px;" href="cxue.corrine@outlook.com">cxue.corrine@outlook.com</a> </p>
-  <p style="font-size: 80%; line-height: 7px;"><span>&#9993;</span> <span class = 'emphasized'> work </span>: <a style="font-size: 100%; line-height: 5px;" href="xue.chunyun@u.nus.edu">xue.chunyun@u.nus.edu</a></p>
+  <p style="font-size: 80%; line-height: 7px;"><span>&#9993;</span> <span class = 'emphasized'> work </span>: <a style="font-size: 100%; line-height: 5px;" href="cxue.corrine@u.nus.edu">cxue.corrine@u.nus.edu</a></p>
   
 </div>
 
